@@ -10,8 +10,13 @@
 // +----------------------------------------------------------------------
 
 // [ 应用入口文件 ]
-namespace think;
 
+namespace think;
+$host = "localhost:13100";
+header("Access-Control-Allow-Origin:http://$host");
+header("Access-Control-Allow-Methods:GET, POST, PATCH, PUT, OPTIONS");
+header("Access-Control-Allow-Headers:Origin, Content-Type, Cookie,Accept,x-requested-with,X-HTTP-Method-Override,access-token");
+header("Access-Control-Allow-Credentials:true");
 // 加载基础文件
 require __DIR__ . '/../thinkphp/base.php';
 
